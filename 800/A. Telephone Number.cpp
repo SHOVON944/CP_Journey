@@ -10,7 +10,7 @@ int main()
         cin>>n;
         string s;
         cin>>s;
-        if(n==11  && s[0]==8){
+        if(n==11  && s[0]=='8'){
             cout<<"YES"<<endl;
         } else{
             if(n<=11){
