@@ -9,7 +9,6 @@ int main() {
         cin >> n;
         string upper, lower;
         cin >> upper >> lower;
-
         int row = 0;
         bool check = true;
 
