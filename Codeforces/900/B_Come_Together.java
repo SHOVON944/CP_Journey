@@ -9,7 +9,7 @@
 
 import java.util.Scanner;
 
-public class B. Come Together {
+public class B_Come_Together {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int t = scan.nextInt();
