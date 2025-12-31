@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+void bublleSort(vector<int> &v){
+    int n = v.size();
+    for(int i=0; i<n-1; i++){
+        for(int j=i; j<n-i-1; j++){
+            if(v[j]>v[j+1]){
+                int temp = v[j];
+                v[j] = v[j+1];
+                v[j+1] = temp;
+            }
+        }
+    }
+}
+
+int main()
+{
+    int n;
+    cin>>n;
+    vector<int> num(n);
+    for(int i=0; i<n; i++) cin>>num[i];
+    bublleSort(num);
+    for(int i: num){
+        cout<<i<<" ";
+    }
+
+    return 0;
+}

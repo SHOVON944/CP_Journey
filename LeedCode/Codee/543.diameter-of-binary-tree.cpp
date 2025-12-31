@@ -18,9 +18,24 @@
  */
 class Solution {
 public:
-    int diameterOfBinaryTree(TreeNode* root) {
-        
+    int ans = 0;
+    int height(TreeNode* root) {    // O(n)
+        if(root==NULL){
+            return 0;
+        }
+
+        int leftHt = height(root->left);
+        int rightHt = height(root->right);
+
+        int currDiameter = leftHt + rightHt;
+        ans = max(ans, currDiameter);
+
+        return max(leftHt, rightHt) + 1;
+    }
+
+    int diameterOfBinaryTree(TreeNode* root) {      // final O(n)
+        height(root);
+        return ans;
     }
 };
 // @lc code=end
-
