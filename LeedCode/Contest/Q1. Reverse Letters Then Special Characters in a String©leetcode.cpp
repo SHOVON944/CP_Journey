@@ -1,6 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
-
 class Solution {
 public:
     string reverseByType(string s) {
@@ -26,11 +23,3 @@ public:
         return s;
     }
 };
-
-
-int main()
-{
-
-
-    return 0;
-}
