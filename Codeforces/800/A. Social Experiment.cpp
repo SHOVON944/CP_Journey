@@ -20,7 +20,9 @@ int main()
     while(t--){
         int n;
         cin>>n;
-        cout<<n%3<<endl;
+        if(n<=3) cout<<n<<endl;
+        else if(n%2==0) cout<<0<<endl;
+        else cout<<1<<endl;
     }
 
     return 0;
