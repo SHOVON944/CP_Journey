@@ -1,4 +1,10 @@
 /*
+ * @lc app=leetcode id=28 lang=cpp
+ *
+ * [28] Find the Index of the First Occurrence in a String
+ */
+
+/*
 ███████╗██╗  ██╗ ██████╗ ██╗   ██╗ ██████╗ ███╗   ██╗
 ██╔════╝██║  ██║██╔═══██╗██║   ██║██╔═══██╗████╗  ██║
 ███████╗███████║██║   ██║██║   ██║██║   ██║██╔██╗ ██║
@@ -7,25 +13,23 @@
 ╚══════╝╚═╝  ╚═╝ ╚═════╝   ╚═══╝   ╚═════╝ ╚═╝  ╚═══╝
 */
 
-import java.util.Scanner;
+class Solution {
+public:
+    int strStr(string h,string n){
+        int a=h.size(),b=n.size();
 
-public class Together {
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        int t = scan.nextInt();
-        while(t-->0){
-            int xA = scan.nextInt();
-            int yA = scan.nextInt();
-            int xB = scan.nextInt();
-            int yB = scan.nextInt();
-            int xC = scan.nextInt();
-            int yC = scan.nextInt();
-
-            int shortest_way = 1;
-            if( (xB>xA  &&  xC>xA)  ||  (xB<xA  &&  xC<xA) ) shortest_way += Math.min(Math.abs(xB-xA), Math.abs(xC-xA));
-            if( (yB>yA  &&  yC>yA)  ||  (yB<yA  &&  yC<yA) ) shortest_way += Math.min(Math.abs(yB-yA), Math.abs(yC-yA));
-            System.out.println(shortest_way);
+        for(int i=0;i<=a-b;i++){
+            int j=0;
+            for(;j<b;j++){
+                if(h[i+j]!=n[j]){
+                    break;
+                }
+            }
+            if(j==b){
+                return i;
+            }
         }
-        scan.close();
+
+        return -1;
     }
-}
+};

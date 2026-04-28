@@ -1,0 +1,37 @@
+/*
+ * @lc app=leetcode id=14 lang=cpp
+ *
+ * [14] Longest Common Prefix
+ */
+/*
+███████╗██╗  ██╗ ██████╗ ██╗   ██╗ ██████╗ ███╗   ██╗
+██╔════╝██║  ██║██╔═══██╗██║   ██║██╔═══██╗████╗  ██║
+███████╗███████║██║   ██║██║   ██║██║   ██║██╔██╗ ██║
+╚════██║██╔══██║██║   ██║╚██╗ ██╔╝██║   ██║██║╚██╗██║
+███████║██║  ██║╚██████╔╝ ╚████╔╝ ╚██████╔╝██║ ╚████║
+╚══════╝╚═╝  ╚═╝ ╚═════╝   ╚═══╝   ╚═════╝ ╚═╝  ╚═══╝
+*/
+
+class Solution {
+public:
+    string longestCommonPrefix(vector<string>&s){
+        int n=s.size();
+        if(n==0){
+            return "";
+        }
+
+        string a=s[0];
+
+        for(int i=0;i<a.size();i++){
+            for(int j=1;j<n;j++){
+                if(i>=s[j].size()||s[j][i]!=a[i]){
+                    return a.substr(0,i);
+                }
+            }
+        }
+
+        return a;
+    }
+};
+// @lc code=end
+
