@@ -1,0 +1,13 @@
+BasedOnStyle: Google
+
+BreakBeforeBraces: Attach
+
+SpaceBeforeParens: Never
+SpaceAfterParens: Never
+SpacesInParentheses: false
+
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+
+ColumnLimit: 0
